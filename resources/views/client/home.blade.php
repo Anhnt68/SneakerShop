@@ -1,39 +1,6 @@
 @extends('layouts.client')
 
 @section('content')
-    {{-- 
-<div class="container">
-
-    <div class="row">
-        @include('client.contents.slide')
-    </div>
-    <div class="row">
-        @foreach ($categories as $key => $value)
-        <div class="col-sm-3 text-center">
-            <a href="{{ route('category',['id'=>$value->id]) }}" class="box-product">
-                <p class="product-title">{{ $value->cate_name }}</p>
-            </a>
-        </div>
-        @endforeach
-    </div>
-
-
-    <div class="row">
-        @foreach ($productLists as $key => $value)
-
-        <div class="col-sm-3 text-center">
-            <a href="{{ route('product',['id'=>$value->id]) }}" class="box-product">
-                <img src="{{ $value->product_image }}" alt="" class="product-image">
-                <p class="product-title">{{ $value->product_name }}</p>
-                <p class="product-price">{{ number_format($value->product_price, 0, '', ',')  }}đ</p>
-                <p class="">{{ $value->category->cate_name }}</p>
-            <p><a href="{{ route('cart.add',['id'=>$value->id]) }}" class="btn btn-primary">Add to cart</a></p>
-
-            </a>
-        </div>
-        @endforeach
-    </div>
-</div> --}}
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -154,6 +121,12 @@
                             </div>
                         </div>
                     @endforeach
+                    <div class="text-center">
+                        {{ $productLists->links() }}
+                    </div>
+                    <p>
+
+                    </p>
 
                 </div>
 

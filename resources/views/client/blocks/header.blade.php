@@ -1,4 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-light text-dark p-0">
+<section class="container-fluid d-flex justify-content-between" style="background-color: #446084">
+    <div class="me-5 container ">
+        <span class="text-white text-uppercase">Chào mừng bạn đến với SneakerShop !!!</span>
+    </div>
+</section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light text-dark p-0">        
+
     <div class="container p-0">
         <a class="navbar-brand mt-lg-0" href="{{ route('home') }}">
             <h5 class="pt-1 text-dark"><img

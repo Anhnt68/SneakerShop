@@ -68,24 +68,15 @@ class ProductController extends Controller
             'created_at' => date('Y-m-d H:i:s'),
         ];
 
-        // dd($dataInsert);
         Products::create($dataInsert);
 
-        // $this->products->addProduct($dataInsert);
         return redirect()->route('admin.products.home');
     }
     public function getEditProduct(Request $request, $id = 0)
     {
         $allCate = Categories::all();
         $getProduct = Products::find($id);
-        // $allCate = $this->categories->getAll();
-        // $getProduct = $this->products->getProduct($id);
-        // if (!empty($getProduct[0])) {
-        //     $request->session()->put('id', $id);
-        //     $getProduct = $getProduct[0];
-        // } else {
-        //     return redirect()->route('admin.products.home');
-        // }
+
         return view('admin.products.edit', compact('getProduct', 'allCate'));
     }
     public function postEditProduct(Request $request, $id)
@@ -129,16 +120,12 @@ class ProductController extends Controller
             'cate_id' => $request->cate_id,
         ];
         Products::where('id', $id)->update($dataUpdate);
-
-        // $this->products->updateProduct($dataUpdate, $id);
         return redirect()->route('admin.products.home');
     }
     public function deleteProduct($id)
     {
         Products::where('id', $id)->delete();
 
-        // $getPro = $this->products->getProduct($id);
-        // $deletePro =  $this->products->deleteProduct($id);
         return redirect()->route('admin.products.home');
     }
 }

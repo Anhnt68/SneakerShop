@@ -5,7 +5,8 @@
 
 
     <hr>
-    <a href="{{ route('checkout.checkBill') }}" class="btn btn-primary">Quay lại</a>
+    <a href="{{ route('checkout.checkBill') }}" class="btn btn-primary"><i
+            class="bi bi-arrow-return-left text-white fs-5"></i></a>
     <table class="table table-bordered">
 
         <thead>

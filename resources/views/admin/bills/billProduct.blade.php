@@ -31,8 +31,8 @@
                 </tr>
             @endforeach
             <tr>
-                <a href="{{ route('admin.bill.bill') }}">
-                    <- Quay lại</a>
+                <a class="btn btn-primary" href="{{ route('admin.bill.bill') }}">
+                    <i class="bi bi-arrow-return-left text-white fs-5"></i></a>
             </tr>
         </tbody>
 

@@ -21,7 +21,7 @@
         </tr>
     </table>
     <h2 class="py-4">Đơn hàng của bạn</h2>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <td>STT</td>

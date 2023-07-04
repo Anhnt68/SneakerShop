@@ -85,11 +85,11 @@
                     </div>
                 @else
                     <p>Giỏ hàng trống</p>
+                    <a href="{{ route('home') }}" class="btn btn-primary mx-3">Cửa hàng</a>
                 @endif
 
             </div>
-            {{-- </div> --}}
-            {{-- </div> --}}
+
 
         </div>
     </div>

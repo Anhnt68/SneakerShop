@@ -27,7 +27,7 @@ class HomeController extends Controller
     function index(Request $request)
     {
         $categories = Categories::all();
-        $productLists = $this->products->all();
+        $productLists = $this->products->where('product_name', 'like', "%" . request()->keywords . '%')->paginate(8);
         return view('client.home', compact('productLists', 'categories'));
     }
 

@@ -13,18 +13,13 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     private $users;
-    const _PER_PAGE = 4;
     public function __construct()
     {
         $this->users = new Users;
-        // $users = new Users();
     }
 
     public function getUser(Request $request)
     {
-        // $statement = $this->users->getAllUsers();
-        $title = 'Danh sách người dùng';
-  
         $userlist = Users::orderBy('created_at', 'DESC')->search()->paginate(4);
      
         return view('admin.users.list', compact('userlist'));
